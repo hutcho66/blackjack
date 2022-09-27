@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1664295577171" clover="3.2.0">
+  <project timestamp="1664295577171" name="All files">
+    <metrics statements="106" coveredstatements="106" conditionals="28" coveredconditionals="28" methods="45" coveredmethods="45" elements="179" coveredelements="179" complexity="0" loc="106" ncloc="106" packages="3" files="9" classes="9"/>
+    <package name="cards">
+      <metrics statements="30" coveredstatements="30" conditionals="11" coveredconditionals="11" methods="12" coveredmethods="12"/>
+      <file name="AceCard.ts" path="/Users/james/Dev/playground/blackjack/src/cards/AceCard.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="84" type="stmt"/>
+        <line num="8" count="84" type="stmt"/>
+        <line num="9" count="84" type="stmt"/>
+      </file>
+      <file name="Card.ts" path="/Users/james/Dev/playground/blackjack/src/cards/Card.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="984" type="stmt"/>
+        <line num="11" count="984" type="stmt"/>
+        <line num="13" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="6" type="stmt"/>
+      </file>
+      <file name="FaceCard.ts" path="/Users/james/Dev/playground/blackjack/src/cards/FaceCard.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="223" type="stmt"/>
+        <line num="8" count="223" type="stmt"/>
+        <line num="9" count="223" type="stmt"/>
+      </file>
+      <file name="NumberCard.ts" path="/Users/james/Dev/playground/blackjack/src/cards/NumberCard.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="3" count="6" type="stmt"/>
+        <line num="5" count="673" type="stmt"/>
+        <line num="8" count="673" type="stmt"/>
+        <line num="9" count="673" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/james/Dev/playground/blackjack/src/cards/index.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="977" type="cond" truecount="5" falsecount="0"/>
+        <line num="9" count="83" type="stmt"/>
+        <line num="11" count="74" type="stmt"/>
+        <line num="13" count="74" type="stmt"/>
+        <line num="15" count="74" type="stmt"/>
+        <line num="17" count="672" type="stmt"/>
+      </file>
+    </package>
+    <package name="deck">
+      <metrics statements="56" coveredstatements="56" conditionals="13" coveredconditionals="13" methods="19" coveredmethods="19"/>
+      <file name="CardCollection.ts" path="/Users/james/Dev/playground/blackjack/src/deck/CardCollection.ts">
+        <metrics statements="28" coveredstatements="28" conditionals="3" coveredconditionals="3" methods="12" coveredmethods="12"/>
+        <line num="8" count="25" type="stmt"/>
+        <line num="9" count="25" type="stmt"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="11" count="25" type="stmt"/>
+        <line num="15" count="1430" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="22" count="1429" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1428" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="28" count="24" type="stmt"/>
+        <line num="34" count="1404" type="stmt"/>
+        <line num="35" count="1404" type="stmt"/>
+        <line num="36" count="1404" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="52" count="31" type="stmt"/>
+        <line num="53" count="31" type="stmt"/>
+        <line num="57" count="23" type="stmt"/>
+        <line num="61" count="23" type="stmt"/>
+        <line num="65" count="25" type="stmt"/>
+        <line num="66" count="25" type="stmt"/>
+        <line num="68" count="25" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="73" count="26" type="stmt"/>
+        <line num="74" count="64" type="stmt"/>
+        <line num="75" count="26" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+      </file>
+      <file name="Deck.ts" path="/Users/james/Dev/playground/blackjack/src/deck/Deck.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="13" count="18" type="stmt"/>
+        <line num="15" count="18" type="stmt"/>
+        <line num="16" count="72" type="stmt"/>
+        <line num="17" count="936" type="stmt"/>
+        <line num="21" count="18" type="stmt"/>
+      </file>
+      <file name="Shoe.ts" path="/Users/james/Dev/playground/blackjack/src/deck/Shoe.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="4" coveredmethods="4"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="12" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="6" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="22" count="17" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hand">
+      <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="14"/>
+      <file name="Hand.ts" path="/Users/james/Dev/playground/blackjack/src/hand/Hand.ts">
+        <metrics statements="20" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="14"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="21" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="16" count="23" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="25" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="44" count="12" type="stmt"/>
+        <line num="49" count="10" type="stmt"/>
+        <line num="50" count="10" type="stmt"/>
+        <line num="51" count="24" type="cond" truecount="3" falsecount="0"/>
+        <line num="53" count="6" type="stmt"/>
+        <line num="54" count="6" type="stmt"/>
+        <line num="56" count="18" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
