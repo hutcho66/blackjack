@@ -25,7 +25,3 @@ jobs:
         name: Jest Tests           # Name of the check run which will be created
         path: junit.xml    # Path to test results
         reporter: jest-junit        # Format of test results
-    - name: Coverage Report
-      uses: romeovs/lcov-reporter-action@v0.2.16
-      with:
-        lcov-file: ./coverage/lcov.info
