@@ -6,7 +6,7 @@ export default class Shoe extends CardCollection {
   private decks: number;
   private stopDeal: number;
 
-  constructor(decks: number, stopDeal: number = 1) {
+  constructor(decks: number, stopDeal = 1) {
     super();
 
     if (!Number.isInteger(decks) || decks < 1 || decks > 8) {

@@ -16,4 +16,12 @@ jobs:
         node-version: '16.x'
     - run: yarn install --frozen-lockfile --ignore-scripts
     - run: yarn compile
-    - run: yarn test
+    - run: yarn test --reporters=jest-junit
+    
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure()    # run this step even if previous step failed
+      with:
+        name: JEST Tests            # Name of the check run which will be created
+        path: junit.xml    # Path to test results
+        reporter: jest-junit        # Format of test results
