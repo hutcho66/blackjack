@@ -3,5 +3,6 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   collectCoverage: true,
-  testPathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/']
+  testPathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/'],
+  coverageReporters: ['text', 'cobertura']
 };
