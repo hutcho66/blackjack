@@ -26,9 +26,7 @@ jobs:
         path: junit.xml    # Path to test results
         reporter: jest-junit        # Format of test results
 
-    - name: Check test coverage
-      id: coverage
-      uses: johanvanhelden/gha-clover-test-coverage-check@v1
+    - name: Upload coverage reports to Codecov with GitHub Action
+      uses: codecov/codecov-action@v3
       with:
-        percentage: "95"
-        filename: "./coverage/clover.xml"
+        files: ./coverage/clover.xml
