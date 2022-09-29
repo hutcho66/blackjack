@@ -1,8 +1,8 @@
 import Card from "../../src/cards/Card";
 
 class TestCard extends Card {
-  hardValue = () => 2;
-  softValue = () => 2;
+  readonly hardValue: number = 2;
+  readonly softValue: number = 2;
 }
 
 describe('Card', () => {

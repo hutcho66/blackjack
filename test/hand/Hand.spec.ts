@@ -1,5 +1,6 @@
 import Hand from '../../src/hand/Hand';
 import { cardFactory } from '../../src/cards/index';
+import AnteBet from '../../src/bet/AnteBet';
 
 describe('Hand', () => {
   test('construct with cards', () => {
@@ -79,5 +80,13 @@ describe('Hand', () => {
     const hand = new Hand(...cards);
 
     expect(hand.toString()).toBe('[2♣, 3♣], value: 5');
+  });
+
+  test('set ante bet', () => {
+    const hand = new Hand();
+    const bet = new AnteBet(10);
+
+    hand.setBet(new AnteBet(10));
+    expect(hand.getBet()).toEqual(bet);
   });
 });

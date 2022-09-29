@@ -7,7 +7,7 @@ describe('NumberCard', () => {
 
     expect(two).toBeInstanceOf(NumberCard);
     expect(two).toBeInstanceOf(Card);
-    expect(two.softValue()).toBe(2);
-    expect(two.hardValue()).toBe(2);
+    expect(two.softValue).toBe(2);
+    expect(two.hardValue).toBe(2);
   });
 });
