@@ -1,7 +1,12 @@
 import Card from '../cards/Card';
+import AnteBet from '../bet/AnteBet';
 
 export default class Hand implements Iterable<Card> {
   private cards: Card[];
+  private ante: AnteBet | undefined;
+  private hasAce = false;
+  private softTotal = 0;
+  private hardTotal = 0;
 
   constructor(...cards: Card[]) {
     this.cards = [];
@@ -14,6 +19,22 @@ export default class Hand implements Iterable<Card> {
 
   add(card: Card) {
     this.cards.push(card);
+
+    this.hardTotal += card.hardValue;
+    if (!this.hasAce && card.hardValue !== card.softValue) {
+      this.hasAce = true;
+      this.softTotal += card.softValue;
+    } else {
+      this.softTotal += card.hardValue;
+    }
+  }
+
+  setBet(bet: AnteBet) {
+    this.ante = bet;
+  }
+
+  getBet() {
+    return this.ante;
   }
 
   size() {
@@ -21,10 +42,8 @@ export default class Hand implements Iterable<Card> {
   }
 
   value() {
-    const softTotal = this.softTotal();
-    if (softTotal <= 21) return softTotal;
-
-    return this.hardTotal();
+    if (this.softTotal <= 21) return this.softTotal;
+    return this.hardTotal;
   }
 
   blackjack() {
@@ -37,23 +56,5 @@ export default class Hand implements Iterable<Card> {
 
   toString() {
     return `[${this.cards.map(card => card.toString()).join(', ')}], value: ${this.value()}`;
-  }
-
-  private hardTotal() {
-    return this.cards.reduce((total, card) => {
-      return total + card.hardValue();
-    }, 0);
-  }
-
-  private softTotal() {
-    let aceInHand = false;
-    return this.cards.reduce((total, card) => {
-      if (card.hardValue() !== card.softValue() && !aceInHand) {
-        // found an ace, add soft value to total
-        aceInHand = true;
-        return total + card.softValue();
-      }
-      return total + card.hardValue();
-    }, 0);
   }
 }

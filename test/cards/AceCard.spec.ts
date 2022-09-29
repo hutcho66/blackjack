@@ -7,7 +7,7 @@ describe('AceCard', () => {
 
     expect(ace).toBeInstanceOf(AceCard);
     expect(ace).toBeInstanceOf(Card);
-    expect(ace.softValue()).toBe(11);
-    expect(ace.hardValue()).toBe(1);
+    expect(ace.softValue).toBe(11);
+    expect(ace.hardValue).toBe(1);
   });
 });
