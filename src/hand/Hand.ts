@@ -29,6 +29,13 @@ export default class Hand implements Iterable<Card> {
     }
   }
 
+  getUpCard() {
+    if (this.cards.length === 0) {
+      throw new Error('Hand is empty, no up card');
+    }
+    return this.cards[0];
+  }
+
   setBet(bet: AnteBet) {
     this.ante = bet;
   }
@@ -44,6 +51,14 @@ export default class Hand implements Iterable<Card> {
   value() {
     if (this.softTotal <= 21) return this.softTotal;
     return this.hardTotal;
+  }
+
+  splittable() {
+    if (this.cards.length === 2 && this.cards[0].hardValue === this.cards[1].hardValue) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   blackjack() {
