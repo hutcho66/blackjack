@@ -89,4 +89,42 @@ describe('Hand', () => {
     hand.setBet(new AnteBet(10));
     expect(hand.getBet()).toEqual(bet);
   });
+
+  test('splittable if cards of same value', () => {
+    const hand = new Hand();
+    hand.add(cardFactory(11, 'clubs'));
+    hand.add(cardFactory(13, 'diamonds'));
+
+    expect(hand.splittable()).toBeTruthy();
+  });
+
+  test('not splittable if cards of different value', () => {
+    const hand = new Hand();
+    hand.add(cardFactory(7, 'clubs'));
+    hand.add(cardFactory(13, 'diamonds'));
+
+    expect(hand.splittable()).toBeFalsy();
+  });
+
+  test('not splittable if more than 2 cards', () => {
+    const hand = new Hand();
+    hand.add(cardFactory(11, 'clubs'));
+    hand.add(cardFactory(11, 'clubs'));
+    hand.add(cardFactory(11, 'clubs'));
+
+    expect(hand.splittable()).toBeFalsy();
+  });
+
+  test('get up card', () => {
+    const cards = [cardFactory(11, 'clubs'), cardFactory(11, 'clubs')];
+    const hand = new Hand(...cards);
+
+    expect(hand.getUpCard()).toBe(cards[0]);
+  });
+
+  test('get up card fails if hand is empty', () => {
+    const hand = new Hand();
+
+    expect(() => {hand.getUpCard()}).toThrowError('Hand is empty, no up card')
+  })
 });
